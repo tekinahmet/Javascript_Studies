@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables</title>
+  </head>
+  <body>
+    <script>
+      let name = "nur";
+      console.log(name);
+      console.log(typeof name);
+      console.log(name, typeof name, isNaN(name)); //nur string
+
+      var dob = 1985;
+      console.log(dob);
+      console.log(typeof dob);
+      console.log(dob, typeof dob); //1985 'number'
+
+      const num = 123n; //bigint
+      console.log(num);
+      console.log(typeof num);
+      //console.log(num, typeof num, isNaN(num))//123n 'bigint'
+      //isNaN(num) --> Uncaught TypeError: Cannot convert a BigInt value to a number
+
+      let isEqual = false;
+      console.log(isEqual);
+      console.log(isEqual, typeof isEqual, isNaN(isEqual)); //false 'boolean'
+
+      let symbol = Symbol();
+      console.log(symbol);
+      //console.log(symbol, typeof symbol, isNaN(symbol))//Symbol() 'symbol', 06-variables.html:32 Uncaught TypeError: Cannot convert a Symbol value to a number
+
+      var noName;
+      console.log(noName);
+      console.log(noName, typeof noName, isNaN(noName)); //undefined 'undefined'
+
+      let surname = null;
+      console.log(surname);
+      console.log(surname, typeof surname, isNaN(surname)); //null 'object'
+
+      let arr = ["ahmet", "kübra", "nur", "nil"];
+      console.log(arr);
+      console.log(arr, typeof arr, isNaN(arr)); // (4) ['ahmet', 'kübra', 'nur', 'nil'] 'object'
+
+      const obj = {
+        name: "Selma",
+        surName: "Bayat",
+        age: 23,
+      };
+      console.log(obj, typeof obj, isNaN(obj)); // {name: 'Selma', surName: 'Bayat', age: 23}  'object'
+      let bolme = 34 / 0;
+      console.log(bolme, typeof bolme, isNaN(bolme)); //Infinity 'number'
+    </script>
+  </body>
+</html>

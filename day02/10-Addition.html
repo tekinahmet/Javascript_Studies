@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Addition</title>
+  </head>
+  <body>
+    <script>
+      let sayi = 123;
+      let birlerBas = 0;
+      let rakamToplami = 0;
+
+      birlerBas = sayi % 10;
+      rakamToplami += birlerBas;
+      sayi /= 10;
+
+      birlerBas = sayi % 10;
+      rakamToplami += birlerBas;
+      sayi /= 10;
+
+      birlerBas = sayi % 10;
+      rakamToplami += birlerBas;
+      sayi /= 10;
+
+      console.log(rakamToplami); //6.530000000000001
+
+      console.log(Math.ceil(rakamToplami)); //yukarı yuvarlama -->7
+      console.log(Math.floor(rakamToplami)); //asagi yuvarlama -->6
+
+      const x = 5;
+      const y = "2";
+      const z = x + y;
+      console.log(z); //52
+      console.log(x - y); //3
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Value-Reference Types</title>
+  </head>
+  <body>
+    <script>
+      //value type
+      let x = 10;
+      let y = x;
+
+      console.log(x == y); //true
+      console.log(y);
+      console.log(x == y); //true
+      y = 20;
+
+      console.log(x);
+      console.log(y);
+      console.log(x == y); //false
+
+      //reference type
+      const car1 = { model: "mercedes", model1: "a180" };
+      car2 = car1;
+      console.log(car1); //{model: 'mercedes', model1: 'a180'}
+      console.log(car2); //{model: 'mercedes', model1: 'a180'}
+      console.log(car1 == car2); //true
+
+      car2.model = "BMW";
+      console.log(car1); //{model: 'BMW', model1: 'a180'}
+      console.log(car2); //{model: 'BMW', model1: 'a180'}
+      console.log(car1 == car2); //true
+
+      console.log([] == []); //false
+    </script>
+  </body>
+</html>
