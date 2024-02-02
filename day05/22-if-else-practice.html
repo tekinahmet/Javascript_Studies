@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If Else</title>
+  </head>
+  <body style="margin: 2rem">
+    <input type="number" id="input" placeholder="ürün tutarı giriniz" />
+    <button type="button" onclick="tutarHesapla()">Tutarı Hesapla</button>
+    <h2 class="result"></h2>
+    <script>
+  /*     function tutarHesapla() {
+        let inputEl = document.querySelector("#input");
+        let tutar = Number(inputEl.value);
+        //console.log(tutar)
+
+        if (tutar > 500) {
+          tutar = tutar - tutar * 0.1;
+        } else {
+          tutar = tutar - tutar * 0.05;
+        }
+        console.log(tutar);
+
+        document.querySelector(
+          ".result"
+        ).innerText = `Toplam ödemeniz gereken ${tutar.toFixed(2)}`;
+        inputEl.value = "";//inputu temizler
+      } */
+
+      function hesapla() {
+        let inputEl = document.querySelector("#inp");
+        let inputElValue = Number(inputEl.value);
+        //console.log(inputElValue,typeof(inputElValue))
+        if (inputElValue > 500) {
+          inputElValue *= 0.9;
+        } else {
+          inputElValue *= 0.95;
+        }
+        document.querySelector(
+          ".result"
+        ).innerHTML = ` Toplam odemeniz gereken tutar: ${inputElValue.toFixed(
+          2
+        )} TL'dir`;
+        /* let sonucEl=document.querySelector(".result")
+                sonucEl.innerHTML=` Toplam odemeniz gereken tutar: ${inputElValue} TL'dir`
+ */
+        inputEl.value = "";
+      }
+    </script>
+  </body>
+</html>
