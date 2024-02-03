@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Short Circuit</title>
+  </head>
+  <body style="margin: 3rem">
+    <input type="number" id="inp" placeholder="0 ila 100 arasında bir sayı" />
+    <button onclick="showResult()">show result</button>
+
+    <script>
+      function showResult() {
+        let inputEl = document.getElementById("inp");
+        let inpValue = Number(inputEl.value);
+
+        //inpValue<0 || inpValue>100 ? alert("hatalı giriş") : alert("hatalı giriş yok");
+
+        /* (inpValue < 0 || inpValue > 100) &&
+          alert("0-100 arası bir sayı giriniz"); */
+
+          (inpValue > 0 && inpValue < 100) ||
+          alert("0-100 arası bir sayı giriniz");
+
+
+        inputEl.value = "";
+      }
+    </script>
+  </body>
+</html>

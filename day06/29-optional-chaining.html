@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optional Chaining</title>
+  </head>
+  <body>
+    <h3 id="name"></h3>
+    <h3 id="age"></h3>
+    <h3 id="address"></h3>
+
+    <script>
+      let user = {
+        name: "John",
+        age: 30,
+        /*   address:{
+            city: "London",
+            country: "UK"
+        } */
+      };
+
+      let nameEl = document.getElementById("name");
+      nameEl.innerHTML = `${user.name}`;
+
+      /* let addressEl = document.getElementById("address");
+      addressEl.innerHTML = `${user?.address}` */
+
+      /* let addressEl = document.getElementById("address");
+      addressEl.innerHTML = `${user?.address?.city}` */
+
+      let addressEl2 = document.getElementById("address");
+      addressEl2.innerHTML = `${user?.address?.country}`; //undefined
+
+      let ageEl = document.getElementById("age");
+      ageEl.innerHTML = `${user.age}`;
+    </script>
+  </body>
+</html>
