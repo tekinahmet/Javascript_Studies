@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome</title>
+  </head>
+  <body>
+    <script>
+     // let str = "kayak";
+      let str = " ey edip adanada pide ye"
+      console.log(str.charAt(str.lenght - 1));
+      
+
+      function isPalindrome(palindrome) {
+        let reverseStr = "";
+        for (let i = palindrome.length - 1; i >= 0; i--) {
+          reverseStr += palindrome.charAt(i);
+          
+        }
+        console.log(reverseStr);
+      }
+     isPalindrome("kayak");
+
+    </script>
+  </body>
+</html>

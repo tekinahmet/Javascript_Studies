@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+  </head>
+  <body>
+    <h3 class="yas"></h3>
+    <script>
+      /*    function yasHesapla() {
+        console.log("Benim yasim " + (2024 - 1990));
+      } */
+
+      /*   let currentYear = 2024;
+      let birthYear = 1985;
+      function yasHesapla() {
+          console.log(`Benim yasim : ${currentYear - birthYear}`);
+      } */
+
+      function yasHesapla(birthyear) {
+        let date = new Date();
+        let year = date.getFullYear();
+        return year - birthyear;
+      }
+
+      yasHesapla(1985);
+      console.log(yasHesapla(1986));
+
+      document.querySelector(".yas").innerHTML = yasHesapla(1985);
+    </script>
+  </body>
+</html>
