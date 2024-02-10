@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tahmin Oyunu</title>
+  </head>
+  <body>
+    <h1>Tahmin Oyunu</h1>
+    <p>Oyuna başlamak için "Oyuna Başla" butonuna basın.</p>
+    <button onclick="oyunaBasla()">Oyuna Başla</button><br /><br />
+    <input type="text" id="tahmin" placeholder="Tahmininizi girin" />
+    <button onclick="tahminEt()">Tahmin Et</button>
+    <p id="sonuc"></p>
+
+    <script>
+      let tutulanSayi;
+
+      function oyunaBasla() {
+        // 1 ile 100 arasında rasgele bir sayı seçme
+        tutulanSayi = Math.floor(Math.random() * 100) + 1;
+        alert("Yeni oyun başladı! Tahmininizi giriniz.");
+      }
+
+      function tahminEt() {
+        let tahmin = parseInt(document.getElementById("tahmin").value);
+
+        if (isNaN(tahmin)) {
+          document.getElementById("sonuc").innerText =
+            "Lütfen geçerli bir sayı giriniz.";
+          return;
+        }
+
+        if (tahmin === tutulanSayi) {
+          document.getElementById("sonuc").innerText =
+            "Tebrikler! Doğru tahmin ettiniz.";
+        } else if (tahmin < tutulanSayi) {
+          document.getElementById("sonuc").innerText =
+            "Daha büyük bir sayı giriniz.";
+        } else {
+          document.getElementById("sonuc").innerText =
+            "Daha küçük bir sayı giriniz.";
+        }
+
+        // Tahmin input'u temizlenir
+        document.getElementById("tahmin").value = "";
+      }
+    </script>
+  </body>
+</html>

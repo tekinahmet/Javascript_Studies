@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Immediately Invoke Function Expression</title>
+  </head>
+  <body>
+    <script>
+      /*!
+      IIFE yöntemi, büyük projelerde birden fazla harici JS dosyasının eklendiği durumlarda her bir dosyadaki değişken ve fonksiyonların birbiri ile karışmasını engellemek için kullanılır
+      Her bir dosyadaki kodlar IIFE içine alınarak bir scope oluşturulup ve değişkenler ile fonksiyonların yaşam alanları belirlenmiş olur
+   */
+      //declaration function
+      (function (a, b) {
+        console.log("Hello World!");
+        let sonuc = a + b;
+
+        /* console.log(sonuc);
+        return sonuc; */
+
+        // return console.log(sonuc);
+
+        console.log(sonuc);
+      })(4, 5);
+
+      // arrow function
+      (() => {
+        console.log("Hello!");
+      })();
+    </script>
+
+    <script src="./js/47-1.script.js"></script>
+    <script src="./js/47-2.script.js"></script>
+  </body>
+</html>
