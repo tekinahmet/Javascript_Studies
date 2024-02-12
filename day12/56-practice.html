@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+  </head>
+  <body>
+    <script>
+      const fiyatlar = [123, 56, 66, 126, 68];
+
+      function yirmiYuzdeArtir(dizi) {
+        const yeniFiyatlar = [];
+        for (let i = 0; i < dizi.length; i++) {
+          yeniFiyatlar.push(dizi[i] * 1.2);
+        }
+        return yeniFiyatlar;
+      }
+
+      let yeniFiyatlar = yirmiYuzdeArtir(fiyatlar);
+      console.log(yeniFiyatlar);
+
+      const x = (arr) => {
+        for (let i = 0; i < arr.length; i++) {
+          arr[i] *= 1.2;
+        }
+        return arr;
+      };
+      let y = x(fiyatlar);
+      console.log(y);
+
+      const setPrice = (arr, rate) => {
+        if (!Array.isArray(arr) || arr.length <= 0) {
+          return;
+        }
+        for (let i = 0; i < arr.length; i++) {
+          arr[i] = arr[i] + (arr[i] * rate) / 100;
+        }
+        return arr;
+      };
+      console.log(setPrice(fiyatlar, 20));
+    </script>
+  </body>
+</html>

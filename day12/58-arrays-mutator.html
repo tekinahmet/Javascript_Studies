@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Mutator Methods</title>
+  </head>
+  <body>
+    <script>
+      let cars = ["Bmw", "Audi", "Mercedes", "Fiat", "Opel"];
+      console.log(cars);
+
+      //push ==> add last
+      cars.push("Ferrari"); //['Bmw', 'Audi', 'Mercedes', 'Fiat', 'Opel']
+      console.log(cars); //['Bmw', 'Audi', 'Mercedes', 'Fiat', 'Opel', 'Ferrari']
+
+      //unshift ==> add first
+      cars.unshift("Porsche");
+      console.log(cars); //['Porsche', 'Bmw', 'Audi', 'Mercedes', 'Fiat', 'Opel', 'Ferrari']
+
+      //pop ==> delete last element
+      cars.pop(); //['Porsche', 'Bmw', 'Audi', 'Mercedes', 'Fiat', 'Opel', 'Ferrari']
+      console.log(cars); //['Porsche', 'Bmw', 'Audi', 'Mercedes', 'Fiat', 'Opel']
+
+      //shift ==> delete first element
+      cars.shift();
+      console.log(cars); //['Bmw', 'Audi', 'Mercedes', 'Fiat', 'Opel']
+
+      //sort ==> ascending
+      console.log(cars.sort()); //['Audi', 'Bmw', 'Fiat', 'Mercedes', 'Opel']
+
+      //reverse ==> descending
+      console.log(cars.reverse()); //['Opel', 'Mercedes', 'Fiat', 'Bmw', 'Audi']
+
+      //splice ==> delete
+      cars.splice(1, 2, "Ferrari");
+      console.log(cars);//['Opel', 'Ferrari', 'Bmw', 'Audi']
+
+      cars.splice(2, 1, "Ferrari");
+      console.log(cars);//['Opel', 'Ferrari', 'Ferrari', 'Audi']
+    </script>
+  </body>
+</html>
