@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Access Methods</title>
+  </head>
+  <body>
+    <script>
+      let cars = ["Bmw", "Audi", "Mercedes", "Fiat", "Opel"];
+      console.log(cars);
+
+      //concat() ==> add
+      console.log(cars.concat("Ferrari")); //['Bmw', 'Audi', 'Mercedes', 'Fiat', 'Opel', 'Ferrari']
+
+      let cars2 = cars.concat(["Ford", "Volkswagen"]); //['Bmw', 'Audi', 'Mercedes', 'Fiat', 'Opel']
+      console.log(cars); //['Bmw', 'Audi', 'Mercedes', 'Fiat', 'Opel']
+      console.log(cars2); //['Bmw', 'Audi', 'Mercedes', 'Fiat', 'Opel', 'Ford', 'Volkswagen']
+
+      //indexOf() ==> gives the index of the element
+      console.log(cars.indexOf("Mercedes")); //2
+      console.log(cars.indexOf("Anadol")); //-1 ==> not found
+
+      //lastIndexOf() ==> gives the last index of the element
+      console.log(cars.lastIndexOf("Mercedes")); //2
+      console.log(cars.indexOf("Tesla")); //-1  ==> not found
+
+      //includes() ==> finds out whether the element is in the array, case sensitive
+      console.log(cars.includes("Mercedes")); //true
+      console.log(cars.includes("Mer")); //false
+      console.log(cars.includes("Anadol")); //false
+
+      //join() ==> add , returns string
+      console.log(cars.join("*")); //Bmw-Audi-Mercedes-Fiat-Opel
+      console.log(cars.join("****").length); //39
+      console.log(cars.join("")); //BmwAudiMercedesFiatOpel
+
+      //toString() => changes array to string, returns string
+      console.log(cars.toString()); //Bmw,Audi,Mercedes,Fiat,Opel
+      console.log(cars.toString().length); //27
+
+      //slice() ==> add
+      console.log(cars.slice(1, 4)); //['Audi', 'Mercedes', 'Fiat']
+      console.log(cars); //['Bmw', 'Audi', 'Mercedes', 'Fiat', 'Opel']
+    </script>
+  </body>
+</html>

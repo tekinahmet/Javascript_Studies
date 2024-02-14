@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mutator 2</title>
+  </head>
+  <body>
+    <script>
+      let cars = ["Bmw", "Audi", "Mercedes", "Fiat", "Opel"];
+      console.log(cars);
+
+      //splice ==> delete || add, (start, how many, what to add)
+      cars.splice(1, 2, "Bugatti"); //['Bmw', 'Audi', 'Mercedes', 'Fiat', 'Opel']
+      console.log(cars); //['Bmw', 'Bugatti', 'Fiat', 'Opel']
+
+      cars.splice(1, 0, "Mustang"); //['Bmw', 'Bugatti', 'Fiat', 'Opel']
+      console.log(cars); //['Bmw', 'Mustang', 'Bugatti', 'Fiat', 'Opel']
+
+      cars.splice(2, 1, "Ferrari"); //['Bmw', 'Mustang', 'Bugatti', 'Fiat', 'Opel']
+      console.log(cars); //['Bmw', 'Mustang', 'Ferrari', 'Fiat', 'Opel']
+
+      console.log(cars.splice(2, 3, "Ford")); //['Ferrari', 'Fiat', 'Opel'] ==> deleted elements
+      console.log(cars); //['Bmw', 'Mustang', 'Ford']
+    </script>
+  </body>
+</html>

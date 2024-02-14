@@ -32,12 +32,15 @@
       //reverse ==> descending
       console.log(cars.reverse()); //['Opel', 'Mercedes', 'Fiat', 'Bmw', 'Audi']
 
-      //splice ==> delete
-      cars.splice(1, 2, "Ferrari");
-      console.log(cars);//['Opel', 'Ferrari', 'Bmw', 'Audi']
+      //splice ==> delete, (start, how many, what to add)
+      cars.splice(1, 2, "Bugatti"); //['Opel', 'Mercedes', 'Fiat', 'Bmw', 'Audi']
+      console.log(cars); //['Opel', 'Bugatti', 'Bmw', 'Audi']
 
-      cars.splice(2, 1, "Ferrari");
-      console.log(cars);//['Opel', 'Ferrari', 'Ferrari', 'Audi']
+      cars.splice(1, 0, "Mustang");
+      console.log(cars); //['Opel', 'Mustang', 'Bugatti', 'Bmw', 'Audi']
+
+      cars.splice(2, 1, "Ferrari"); //['Opel', 'Mustang', 'Bugatti', 'Bmw', 'Audi']
+      console.log(cars); //['Opel', 'Mustang', 'Ferrari', 'Bmw', 'Audi']
     </script>
   </body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iteration For In</title>
+  </head>
+  <body>
+    <script>
+      //for in loop is used to iterate over the properties of an array.
+      /*   let fruits = ["apple", "banana", "orange"];
+      for (let i in fruits) {
+        console.log(i, fruits[i]);
+      } */
+
+      let names = ["John", "Jane", "Joe", "Jill", "Jack"];
+      let surnames = ["Smith", "Doe", "Jackson", "Swift", "Lopez"];
+      /* for (let i in names) {
+        console.log(names[i] + " " + surnames[i]); //John Smith, Jane Doe, Joe Jackson, Jill Swift, Jack Lopez
+      } */
+
+      const joinThem = (names, surnames) => {
+        let fullName = [];
+        for (let i in names) {
+          fullName.push(names[i] + " " + surnames[i]);
+        }
+        return fullName;
+      };
+      console.log(joinThem(names, surnames));
+
+      let isimler = ["Aysun", "Beril", "Gamze", "Canan", "Hulya", "Alparslan"];
+      let soyIsimler = ["Kaya", "Koc", "Yildirim", "kara", "Yavuz", "Bozkurt"];
+      const birlestir = (adlar, soyadlar) => {
+        let adSoyadlar = [];
+        for (let w in soyadlar) {
+          // adSoyadlar.push(`${adlar[w]} ${soyadlar[w]}`)
+          adSoyadlar[w] = `${adlar[w]} ${soyadlar[w]}`;
+        }
+        return adSoyadlar;
+      };
+      console.log(birlestir(isimler, soyIsimler));
+    </script>
+  </body>
+</html>
