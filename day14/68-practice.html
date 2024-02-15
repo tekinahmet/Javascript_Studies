@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta ad="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+  </head>
+  <body>
+    <script>
+      const urunler = [
+        { id: 1, ad: "laptop", fiyat: 3000 },
+        { id: 2, ad: "mobile", fiyat: 1000 },
+        { id: 3, ad: "watch", fiyat: 500 },
+        { id: 4, ad: "tablet", fiyat: 2000 },
+        { id: 5, ad: "charger", fiyat: 500 },
+      ];
+
+      // Yeni değerleri saklamak için boş bir dizi oluştur
+
+      let zamliUrunler = [];
+
+      // Her bir ürün için döngü başlat
+
+      urunler.forEach(function (urun) {
+        // Fiyata göre zam hesapla
+        let zamOrani = urun.fiyat > 1000 ? 0.1 : 0.15;
+        let zamMiktari = urun.fiyat * zamOrani;
+        let newPrices = urun.fiyat + zamMiktari;
+
+        // Yeni değerleri yeni diziye ekle
+
+        zamliUrunler.push({
+            id: urun.id,
+          ad: urun.ad,
+          oldPrices: urun.fiyat,
+          newPrices: newPrices,
+        });
+      });
+
+      // Sonuçları yazdır
+
+      console.log("Orjinal Ürünler:", urunler);
+      console.log("Zamlı Ürünler:", zamliUrunler);
+    </script>
+  </body>
+</html>
+<!--      tlFiyatlar dizidekisindeki ürünlere fiyatı 100 TL den fazla olanlara %10 zam, 100 TL den az olanlara ise %15 zam yapılmak isteniyor.
+      Ayrıca, zamlı olan yeni  değerleri yeni bir diziye saklamak istiyoruz.-->

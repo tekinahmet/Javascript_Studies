@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forEach</title>
+  </head>
+  <body>
+    <script>
+      let flowers = [
+        "rose",
+        "tulip",
+        "daisy",
+        "jasmine",
+        "lily",
+        "sunflower",
+        "buttercup",
+      ];
+
+      //flowers.forEach((item, index) => console.log(item + "==>" + index));
+
+      flowers.forEach((flower, index) => {
+        console.log(flower.toUpperCase() + "-" + index);
+      });
+
+      let fishes = [
+        "shark",
+        "whale",
+        "dolphin",
+        "octopus",
+        "crab",
+        "crayfish",
+        "tuna",
+      ];
+      let newFishes = [];
+      fishes.forEach((fish) =>
+        newFishes.push(fish.toUpperCase().substring(0, 3))
+      );
+      console.log(newFishes);
+
+      const dizi = [-5, 24, -13, 7];
+      const yeniDizi = [];
+      dizi.forEach((number, index) => {
+        //yeniDizi[index]=number*5;
+        yeniDizi.push(number * 5);
+      });
+      console.log(yeniDizi);
+    </script>
+  </body>
+</html>
