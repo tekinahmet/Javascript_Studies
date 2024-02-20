@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>getAttributes</title>
+    <style>
+      #tcNo {
+        margin: 1rem;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="number" id="tcNo" placeholder="Tc No Giriniz"/>
+    <button id="btnSubmit" disabled>Submit</button>
+    <script>
+      let buttonEl = document.getElementById("btnSubmit");
+      document.getElementById("tcNo").addEventListener("input", (e) => {
+          let tcNoINP = e.target.value;
+          if(tcNoINP.length == 11){
+              buttonEl.removeAttribute("disabled");
+          }else{
+              buttonEl.setAttribute("disabled", true);
+              //buttonEl.setAttribute("disabled", "disabled");
+          }
+          
+      })
+
+
+    </script>
+  </body>
+</html>
