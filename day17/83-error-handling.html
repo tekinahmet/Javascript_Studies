@@ -8,18 +8,35 @@
 <body>
     
     <script>
+
         const bolmeIslemi = (a,b) => { 
+
         try {
+
             if(b===0){
                  throw new Error("Bir sayi 0'a bolunemez");
             } 
             return a/b;
             
         } catch (error) {
+
            console.error("Hata olustu, olusan hata:",error.message) 
             
         }finally{
             console.log("islem basariyla tamamlandi")
         }
+
+
          }
+
+
+
 console.log(bolmeIslemi(10,2))
+
+
+
+
+
+    </script>
+</body>
+</html>
