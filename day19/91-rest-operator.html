@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest Operator</title>
+  </head>
+  <body>
+    <script>
+      const sum1 = (a, b) => {
+        return a + b;
+      };
+      console.log("sum1: ", sum1(34, 69, 41));
+
+      const sum2 = (...nums) => {
+        return nums.reduce((t, num) => t + num, 0);
+      };
+      console.log("sum2: ", sum2(34, 69, 41));
+    </script>
+  </body>
+</html>

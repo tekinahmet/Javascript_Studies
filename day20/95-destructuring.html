@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        name: "John",
+        surname: "Doe",
+        country: "USA",
+        department: "IT",
+        salary: 5000,
+      };
+      //classical way
+      const getData = (p) => {
+        return `${p.name} ${p.surname} ${p.country} ${p.department} ${p.salary}`;
+      };
+      console.log(getData(person)); //John Doe USA IT 5000
+
+      const getInfo = () => {
+        const { name, surname, country, department, salary } = person;
+        console.log(`Name: ${name} ${surname}`); //Name: John Doe
+        console.log(`Country: ${country}`); //Country: USA
+        console.log(`Department: ${department}`); //Department: IT
+        console.log(`Salary: ${salary}`); //Salary: 5000
+      };
+
+      getInfo(person);
+
+      const getInfo2 = ({ name, surname }) => {
+        console.log(`Name: ${name} ${surname}`); //Name: John Doe
+      };
+      getInfo2(person);
+    </script>
+  </body>
+</html>
